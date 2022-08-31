@@ -6,7 +6,7 @@ import java.io.IOException
 
 class LoginApiImpl : LoginApi {
 
-    override fun login(user: User): Result<LoggedInUser> {
+    override suspend fun login(user: User): Result<LoggedInUser> {
         return try {
             // TODO: handle loggedInUser authentication
             val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), "Carlos Rios")

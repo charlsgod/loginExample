@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class DoLoginUseCase @Inject constructor(private val repository: LoginRepository) {
 
-    operator fun invoke(user: User): Result<LoggedInUser> =
+    suspend operator fun invoke(user: User): Result<LoggedInUser> =
         repository.login(user)
 
 }
